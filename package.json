@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "serverless": "^1.12.1",
+    "serverless-webpack": "^1.0.0-rc.4",
     "uuid": "^2.0.3"
   }
 }
