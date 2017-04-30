@@ -5,6 +5,9 @@ frameworkVersion: ">=1.1.0 <2.0.0"
 plugins:
   - serverless-webpack
 
+custom:
+  webpackIncludeModules: true
+
 provider:
   name: aws
   runtime: nodejs4.3
