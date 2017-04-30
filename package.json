@@ -5,6 +5,9 @@
   "repository": "https://github.com/stumacsolutions/finance-manager-api.git",
   "author": "Stuart McGregor <stumacsolutions@gmail.com>",
   "license": "None",
+  "scripts": {
+    "deploy": "serverless deploy"
+  },
   "dependencies": {
     "uuid": "^2.0.3"
   }
