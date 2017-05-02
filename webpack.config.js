@@ -1,13 +1,7 @@
 var nodeExternals = require('webpack-node-externals')
 
 module.exports = {
-  entry: [
-    './todos/create.js',
-    './todos/delete.js',
-    './todos/get.js',
-    './todos/list.js',
-    './todos/update.js'
-  ],
+  entry: './todos/list.js',
   externals: [nodeExternals()],
   module: {
     loaders: [{
