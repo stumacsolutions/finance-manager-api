@@ -9,6 +9,14 @@ module.exports = {
     './todos/update.js'
   ],
   externals: [nodeExternals()],
+  module: {
+    loaders: [{
+      test: /\.js$/,
+      loaders: ['babel-loader'],
+      include: __dirname,
+      exclude: /node_modules/,
+    }]
+  },
   output: {
     filename: 'handler.js',
     libraryTarget: 'commonjs',
