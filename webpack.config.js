@@ -17,10 +17,5 @@ module.exports = {
       exclude: /node_modules/,
     }]
   },
-  output: {
-    filename: 'handler.js',
-    libraryTarget: 'commonjs',
-    path: '.webpack'
-  },
   target: 'node'
 }
