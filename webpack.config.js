@@ -11,6 +11,7 @@ module.exports = {
   externals: [nodeExternals()],
   output: {
     filename: 'handler.js',
+    libraryTarget: 'commonjs',
     path: '.webpack'
   },
   target: 'node'
