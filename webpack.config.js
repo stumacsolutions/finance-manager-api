@@ -9,5 +9,9 @@ module.exports = {
     './todos/update.js'
   ],
   externals: [nodeExternals()],
+  output: {
+    filename: 'handler.js',
+    path: '.webpack'
+  },
   target: 'node'
 }
