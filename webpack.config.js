@@ -1,17 +1,13 @@
-var path = require('path');
+var nodeExternals = require('webpack-node-externals')
+var path = require('path')
 
 module.exports = {
-  entry: {
-    create: './todos/create.js',
-    delete: './todos/delete.js,'
-    get: './todos/get.js',
-    list: './todos/list.js',
-    update: './todos/update.js'
-  },
+  entry: './todos/index.js',
+  externals: [nodeExternals()],
   target: 'node',
-  output: {
-    libraryTarget: 'commonjs',
-    path: path.join(__dirname, '.webpack'),
-    filename: '[name].js'
-  },
-};
+  module: {
+    loaders: [
+      { test: /\.js$/, include: /todos/, loader: 'babel' }
+    ]
+  }
+}
