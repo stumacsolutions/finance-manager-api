@@ -13,6 +13,7 @@
     "babel-loader": "^7.0.0",
     "path": "^0.12.7",
     "serverless": "^1.12.1",
+    "serverless-webpack": "^1.0.0-rc.4",
     "uuid": "^2.0.3",
     "webpack": "^2.4.1",
     "webpack-node-externals": "^1.5.4"
