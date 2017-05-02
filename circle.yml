@@ -4,6 +4,9 @@ machine:
 dependencies:
   override:
     - yarn
+test:
+  override:
+    - echo "test"
 deployment:
   prod:
     branch: master
