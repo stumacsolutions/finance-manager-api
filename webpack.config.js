@@ -1,19 +1,31 @@
-var nodeExternals = require('webpack-node-externals')
-var path = require('path')
-
 module.exports = {
-  entry: [
-    './todos/create.js',
-    './todos/delete.js',
-    './todos/get.js',
-    './todos/list.js',
-    './todos/update.js'
-  ],
-  externals: [nodeExternals()],
+  // entry: set by the plugin
+  // output: set by the plugin
   target: 'node',
+  externals: [
+    /aws-sdk/, // Available on AWS Lambda
+  ],
   module: {
-    loaders: [
-      { test: /\.js$/, include: /todos/, loader: 'babel' }
-    ]
-  }
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: [
+            [
+              'env',
+              {
+                target: { node: 6.10 }, // Node version on AWS Lambda
+                useBuiltIns: true,
+                modules: false,
+                loose: true,
+              },
+            ],
+            'stage-0',
+          ],
+        },
+      },
+    ],
+  },
 }
