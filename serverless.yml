@@ -3,7 +3,7 @@ service: serverless-rest-api-with-dynamodb
 frameworkVersion: ">=1.1.0 <2.0.0"
 
 plugins:
-  - serverless-webpack
+  - serverless-plugin-webpack
 
 custom:
   webpackIncludeModules: true
